@@ -6,6 +6,9 @@ import "@/assets/style/global.scss";
 import routes from "virtual:generated-pages";
 import elementPlus from "element-plus";
 import "element-plus/theme-chalk/index.css";
+import checkUpdate from "@/utils/check-update";
+
+checkUpdate(import.meta.env.PROD);
 
 const router = createRouter({
   history: createWebHistory(),

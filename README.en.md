@@ -1,7 +1,7 @@
 # frontend-practice
 
 #### Description
-前端联系项目
+前端练习项目
 
 #### Software Architecture
 Software architecture description

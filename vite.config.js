@@ -22,28 +22,12 @@ export default defineConfig({
     port: 4000,
   },
   esbuild: {
-    drop: ["console", "debugger"],
+    // drop: ["console", "debugger"],
   },
   build: {
     target: "es2015",
     assetsInlineLimit: 8192,
     sourcemap: isProd,
     minify: isProd ? "esbuild" : false,
-    rollupOptions: {
-      output: {
-        chunkFileNames: "js/[name]-[hash].js",
-        entryFileNames: "js/entry-[name]-[hash].js",
-        assetFileNames: "assets/[ext]/[name].[hash].[ext]",
-        manualChunks: (id) => {
-          if (id.includes("node_modules")) {
-            return id
-              .toString()
-              .split("node_modules/")[1]
-              .split("/")[0]
-              .toString();
-          }
-        },
-      },
-    },
   },
 });
