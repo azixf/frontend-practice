@@ -65,7 +65,7 @@
 
 <script>
 export default {
-  name: "TurnPage",
+  name: "仿真书页效果",
   data() {
     return {
       turnPage: {
@@ -134,7 +134,7 @@ export default {
       this.turnPage.show = false;
       this.turnPage.loading = true;
 
-      await new Promise((resolve) => {
+      await new Promise(resolve => {
         setTimeout(() => {
           resolve();
         }, 500);
@@ -321,6 +321,7 @@ export default {
   position: relative;
   /* height: calc(100% - 50px); */
   height: 100%;
+  background: #eee;
 }
 
 .page .img img {

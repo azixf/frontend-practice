@@ -41,6 +41,10 @@
 import { onBeforeUpdate, ref, unref } from "vue";
 import { Close } from "@element-plus/icons-vue";
 
+defineOptions({
+  name: 'elementplus弹窗 动态ref数组'
+})
+
 const chooseModule = ref({
   id: 1,
 });

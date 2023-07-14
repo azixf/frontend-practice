@@ -21,9 +21,13 @@
 
 <script setup>
 import { ref, shallowRef } from "vue";
-import test1 from "../../components/vue-transition-group/test1.vue";
-import test2 from "../../components/vue-transition-group/test2.vue";
-import test3 from "../../components/vue-transition-group/test3.vue";
+import test1 from "@/components/vue-transition-group/test1.vue";
+import test2 from "@/components/vue-transition-group/test2.vue";
+import test3 from "@/components/vue-transition-group/test3.vue";
+
+defineOptions({
+  name: "vue transiton动效",
+});
 
 const components = [test1, test2, test3];
 const componentList = shallowRef([test1]);
