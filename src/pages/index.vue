@@ -47,6 +47,7 @@ function getComponentName(path) {
   ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: min-content;
     gap: 10px;
     li {
       height: 10vh;
