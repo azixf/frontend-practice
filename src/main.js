@@ -7,6 +7,9 @@ import routes from "virtual:generated-pages";
 import elementPlus from "element-plus";
 import "element-plus/theme-chalk/index.css";
 import checkUpdate from "@/utils/check-update";
+import globalComponents from "@/utils/global-components";
+
+import "virtual:svg-icons-register";
 
 checkUpdate(import.meta.env.PROD);
 
@@ -18,4 +21,5 @@ const router = createRouter({
 const app = createApp(App);
 app.use(router);
 app.use(elementPlus);
+app.use(globalComponents);
 app.mount("#app");

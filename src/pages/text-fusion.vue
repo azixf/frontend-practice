@@ -8,7 +8,7 @@ export default {
   name: "文字融合",
 };
 </script>
-<script setup lang="ts"></script>
+<script setup></script>
 <style lang="scss" scoped>
 .page {
   background: rgba(0, 0, 0, 1);

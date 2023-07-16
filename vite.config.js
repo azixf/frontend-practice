@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import pages from "vite-plugin-pages";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+import legacy from '@vitejs/plugin-legacy'
 import path from "path";
 
 const isProd = process.env.NODE_ENV === "production";
@@ -17,12 +19,19 @@ export default defineConfig({
       dirs: "src/pages",
       extensions: ["vue"],
     }),
+    createSvgIconsPlugin({
+      iconDirs: [
+        path.resolve(__dirname, 'src/assets/svg')
+      ],
+      symbolId: 'icon-[dir]-[name]'
+    }),
+    legacy()
   ],
   server: {
     port: 4000,
   },
   esbuild: {
-    // drop: ["console", "debugger"],
+    drop: ["console", "debugger"],
   },
   build: {
     target: "es2015",

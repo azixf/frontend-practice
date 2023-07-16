@@ -3,7 +3,7 @@
     <h1>文字适配背景</h1>
   </div>
 </template>
-<script lang="ts" setup>
+<script setup>
 defineOptions({
   name: "文字适配背景",
 });
