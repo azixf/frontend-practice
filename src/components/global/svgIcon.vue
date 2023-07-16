@@ -1,5 +1,5 @@
 <template>
-  <svg :style="{ width, height }">
+  <svg :style="{ width, height, cursor: cursor ? 'pointer' : 'auto' }">
     <use :xlink:href="prefix + '-' + name" :fill="color"></use>
   </svg>
 </template>
@@ -28,6 +28,10 @@ defineProps({
   height: {
     type: String,
     default: "24px",
+  },
+  cursor: {
+    type: Boolean,
+    default: true,
   },
 });
 </script>

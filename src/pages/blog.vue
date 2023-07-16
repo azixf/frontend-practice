@@ -3,13 +3,7 @@
     <div class="bg"></div>
     <div class="content">
       <header class="header">
-        <!-- <img
-          class="logo"
-          src="/logo.svg"
-          alt=""
-          @click="$router.push('/blog')"
-        /> -->
-        <div class="logo">
+        <div class="logo" @click="$router.push('/blog')">
           <svg-icon name="logo"></svg-icon>
         </div>
         <ul class="navbar">
@@ -19,8 +13,10 @@
           <li class="nav-item">PHP</li>
         </ul>
         <div class="operations">
-          <span>github</span>
-          <span>switch</span>
+          <a href="https://github.com/azixf" target="_blank">
+            <svg-icon name="github"></svg-icon>
+          </a>
+          <svg-icon name="sun"></svg-icon>
         </div>
       </header>
       <main class="main place-center">
@@ -73,7 +69,6 @@ defineOptions({
       .logo {
         width: 32px;
         height: 32px;
-        cursor: pointer;
         &:hover {
           filter: drop-shadow(0 4px 10px #4a7a5e);
         }
@@ -96,7 +91,7 @@ defineOptions({
 
       .operations {
         display: flex;
-        gap: 8px;
+        gap: 16px;
       }
     }
 
