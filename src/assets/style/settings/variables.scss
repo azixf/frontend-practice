@@ -1,0 +1,46 @@
+// 颜色
+$color-primary: #4a7a5e;
+$color-primary-light: #7b9f80;
+$color-primary-dark: #2b5a41;
+$color-second: #d2c7a3;
+$color-third: #bebebe;
+$color-danger: #d7263d;
+$color-warning: #ffca28;
+$color-info: #3e4c59;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-text: #333333;
+$color-text-light: #666666;
+$color-text-lighter: #999999;
+
+// 行高
+$line-height-base: 1 !default;
+$line-height-md: $line-height-base * 1.5 !default;
+$line-height-xl: $line-height-base * 2 !default;
+$line-height-xxl: $line-height-base * 2.5 !default;
+
+// 字体
+$font-size-base: 1rem !default;
+$font-size-md: $font-size-base * 1.5 !default;
+$font-size-xl: $font-size-base * 1.75 !default;
+$font-size-xxl: $font-size-base * 2 !default;
+
+// 字重
+$font-weight-base: 400 !default;
+$font-weight-normal: 500 !default;
+$font-weight-bold: 600 !default;
+$font-weight-bolder: 700 !default;
+
+// 间距
+$padding-instance-base: 8px !default;
+$padding-instance-sm: 0.5 * $padding-instance-base !default;
+$padding-instance-md: 1.5 * $padding-instance-base !default;
+$padding-instance-xl: 2 * $padding-instance-base !default;
+$padding-instance-xxl: 3 * $padding-instance-base !default;
+
+// 圆角
+$border-radius-base: 8px !default;
+$border-radius-sm: 0.5 * $border-radius-base !default;
+$border-radius-md: 1.5 * $border-radius-base !default;
+$border-radius-xl: 2 * $border-radius-base !default;
+$border-radius-xxl: 3 * $border-radius-base !default;

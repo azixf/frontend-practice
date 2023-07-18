@@ -13,6 +13,13 @@ export default defineConfig({
       "~": path.resolve(__dirname, "src"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/assets/style/theme/_themeify.scss" as *;`
+      }
+    }
+  },
   plugins: [
     vue(),
     pages({
