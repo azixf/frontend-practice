@@ -16,6 +16,9 @@ devDependencies:
   lodash-es:
     specifier: ^4.17.21
     version: registry.npmmirror.com/lodash-es@4.17.21
+  lunar-typescript:
+    specifier: ^1.6.7
+    version: registry.npmmirror.com/lunar-typescript@1.6.7
   reset-css:
     specifier: ^5.0.1
     version: 5.0.1
@@ -3931,6 +3934,12 @@ packages:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
     name: lodash-es
     version: 4.17.21
+    dev: true
+
+  registry.npmmirror.com/lunar-typescript@1.6.7:
+    resolution: {integrity: sha512-+a1E5OGgxjg1ZZFsXGhyvQKT2WvQxwHddk+9w6Y9uAZkW79DGjwOTLT4Qqy/K29zw+Z5/kxO7ZLFvbC8BQMjNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lunar-typescript/-/lunar-typescript-1.6.7.tgz}
+    name: lunar-typescript
+    version: 1.6.7
     dev: true
 
   registry.npmmirror.com/sortablejs@1.15.0:
