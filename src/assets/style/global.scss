@@ -1,6 +1,24 @@
 * {
   outline: none;
   box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 6px;
+    height: 6px;
+    border-radius: 8px;
+    background-color: #ddd;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
 }
 
 html,
@@ -12,7 +30,12 @@ body,
   font-size: 16px;
 }
 
+#app {
+  overflow: auto;
+}
+
 body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow: hidden;
 }
 
