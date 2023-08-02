@@ -1,15 +1,21 @@
 * {
   outline: none;
   box-sizing: border-box;
+
+  &:hover::-webkit-scrollbar {
+    display: block;
+  }
+
   &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    display: none;
+    width: 6px;
+    height: 6px;
   }
 
   &::-webkit-scrollbar-thumb {
     width: 6px;
     height: 6px;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: #ddd;
     &:hover {
       background-color: #ccc;
@@ -17,7 +23,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    border-radius: 8px;
+    border-radius: 6px;
   }
 }
 
@@ -32,6 +38,7 @@ body,
 
 #app {
   overflow: auto;
+  scroll-snap-type: y mandatory;
 }
 
 body {

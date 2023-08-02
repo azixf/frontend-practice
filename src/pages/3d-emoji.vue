@@ -10,7 +10,7 @@
   </div>
 </template>
 <script setup>
-import { onMounted, shallowRef, watchEffect } from "vue";
+import { onBeforeUnmount, onMounted, shallowRef } from "vue";
 
 defineOptions({
   name: "3D emoji表情",
@@ -20,16 +20,18 @@ const emojiRef = shallowRef();
 let curTranslate = 0,
   lastTranslate = 0,
   diff = 0;
+
+let handler = null;
 onMounted(() => {
-  watchEffect((invalid) => {
-    const handler = window.requestAnimationFrame(aniFun);
-    invalid(() => {
-      window.cancelAnimationFrame(handler);
-    });
-  });
+  handler = window.requestAnimationFrame(aniFun);
+});
+
+onBeforeUnmount(() => {
+  window.cancelAnimationFrame(handler);
 });
 
 function aniFun() {
+  if (!emojiRef.value) return;
   curTranslate =
     window
       .getComputedStyle(emojiRef.value, null)
