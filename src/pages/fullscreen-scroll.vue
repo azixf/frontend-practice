@@ -1,4 +1,5 @@
 <template>
+  <!-- ios滚动效果不佳 -->
   <div class="page place-center">fullscreen-scroll1</div>
   <div class="page place-center">fullscreen-scroll2</div>
   <div class="page place-center">fullscreen-scroll3</div>
