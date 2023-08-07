@@ -1,5 +1,5 @@
 <template>
-  <div class="page place-center">
+  <div class="page">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -66,6 +66,22 @@
         stroke-width="7"
       ></path>
     </svg>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1.1"
+      class="svg-ani"
+      width="120"
+      height="160"
+    >
+      // 折线
+      <polyline
+        points="60 10, 100 140,10 50,110 50,30 140, 60 10"
+        fill="none"
+        stroke="#ef68b3"
+        stroke-width="2"
+      ></polyline>
+    </svg>
   </div>
 </template>
 <script setup>
@@ -73,4 +89,19 @@ defineOptions({
   name: "SVG",
 });
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.svg-ani {
+  stroke-dasharray: 700;
+  animation: ani 1.4s ease-in forwards;
+}
+
+@keyframes ani {
+  from {
+    stroke-dashoffset: 700;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+</style>
