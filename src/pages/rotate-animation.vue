@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="water-box">
+  <div class="water-box">
     <div class="spin-box">
       <div class="spin-content">
         <img
@@ -47,36 +47,35 @@
         </div>
       </div>
     </div>
-  </div> -->
-  <div id="container" style="width: 100vw; height: 100vh"></div>
+  </div>
+  <!-- <div id="container" style="width: 100vw; height: 100vh"></div> -->
   <!-- <canvas id="canvas" width="400" height="200"></canvas> -->
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue";
 import * as echarts from "echarts";
-import axios from "axios";
 
 defineOptions({
   name: "旋转水球",
 });
 
-const instFlow = ref(0);
+// const instFlow = ref(0);
 
-const filterDevices = [
-  {
-    label: "第一期",
-    instFlow: "325.33",
-  },
-  {
-    label: "第二期",
-    instFlow: "4566.25",
-  },
-  {
-    label: "第三期",
-    instFlow: "9878.46",
-  },
-];
+// const filterDevices = [
+//   {
+//     label: "第一期",
+//     instFlow: "325.33",
+//   },
+//   {
+//     label: "第二期",
+//     instFlow: "4566.25",
+//   },
+//   {
+//     label: "第三期",
+//     instFlow: "9878.46",
+//   },
+// ];
 
 // onMounted(() => {
 //   const canvas = document.getElementById("canvas");
@@ -228,52 +227,52 @@ const filterDevices = [
 //     myChart.setOption(option);
 //   }
 // });
-onMounted(async() => {
-  var ROOT_PATH = "https://echarts.apache.org/examples";
+// onMounted(async() => {
+//   var ROOT_PATH = "https://echarts.apache.org/examples";
 
-  var chartDom = document.getElementById("container");
-  var myChart = echarts.init(chartDom);
-  var option;
+//   var chartDom = document.getElementById("container");
+//   var myChart = echarts.init(chartDom);
+//   var option;
 
-  const svg = await fetch("shang.svg").then(res => res.text())
-    echarts.registerMap("Beef_cuts_France", { svg: svg });
-    option = {
-      tooltip: {},
-      visualMap: {
-        left: "center",
-        bottom: "10%",
-        min: 5,
-        max: 100,
-        orient: "horizontal",
-        text: ["", "Price"],
-        realtime: true,
-        calculable: true,
-        inRange: {
-          color: ["#dbac00", "#db6e00", "#cf0000"],
-        },
-      },
-      series: [
-        {
-          name: "French Beef Cuts",
-          type: "map",
-          map: "Beef_cuts_France",
-          roam: true,
-          emphasis: {
-            label: {
-              show: false,
-            },
-          },
-          selectedMode: false,
-          data: [
-            { name: "Queue", value: 15 },
-          ],
-        },
-      ],
-    };
-    myChart.setOption(option);
+//   const svg = await fetch("shang.svg").then(res => res.text())
+//     echarts.registerMap("Beef_cuts_France", { svg: svg });
+//     option = {
+//       tooltip: {},
+//       visualMap: {
+//         left: "center",
+//         bottom: "10%",
+//         min: 5,
+//         max: 100,
+//         orient: "horizontal",
+//         text: ["", "Price"],
+//         realtime: true,
+//         calculable: true,
+//         inRange: {
+//           color: ["#dbac00", "#db6e00", "#cf0000"],
+//         },
+//       },
+//       series: [
+//         {
+//           name: "French Beef Cuts",
+//           type: "map",
+//           map: "Beef_cuts_France",
+//           roam: true,
+//           emphasis: {
+//             label: {
+//               show: false,
+//             },
+//           },
+//           selectedMode: false,
+//           data: [
+//             { name: "Queue", value: 15 },
+//           ],
+//         },
+//       ],
+//     };
+//     myChart.setOption(option);
 
-  option && myChart.setOption(option);
-});
+//   option && myChart.setOption(option);
+// });
 </script>
 
 <style lang="scss" scoped>
@@ -286,6 +285,7 @@ canvas {
   height: 200px;
   display: flex;
   gap: 4px;
+  background-color: rgba(1, 47, 74);
   .spin-box {
     flex: 3;
     position: relative;
@@ -302,7 +302,7 @@ canvas {
         transform: translate(-50%, -50%);
         position: absolute;
         height: 100%;
-        animation: animate 4.6s linear infinite;
+        animation: animate 18.6s cubic-bezier(0.26,-0.26, 0.76, 1.3) infinite;
       }
 
       .spinner {
